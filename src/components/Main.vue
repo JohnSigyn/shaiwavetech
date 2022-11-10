@@ -1,12 +1,12 @@
 <template>
   <div
     class="bg-slate-900 flex justify-center items-center overflow-hidden relative z-100"
-    style="min-height:100vh;min-width:99.1vw"
+    style="min-height:100vh;min-width:99.1vw;position:relative"
   >
   
     <Particles
-    
-      id="tsparticles"
+        style="min-width:100vh;min-height:100vh !important;position:absolute"
+      id="tsparticles" class="particles"
       :particlesInit="particlesInit"
       :particlesLoaded="particlesLoaded"
       :options="{
@@ -14,6 +14,9 @@
           color: {
             value: 'none'
           }
+        },
+        style:{
+            height:1366
         },
         fpsLimit: 120,
         interactivity: {
@@ -56,7 +59,7 @@
             width: 1
           },
           collisions: {
-            enable: true
+            enable: false
           },
           move: {
             direction: 'none',
@@ -85,6 +88,7 @@
             value: { min: 1, max: 5 }
           }
         },
+        fullScreen:false,
         detectRetina: false
       }"
     />
@@ -137,6 +141,7 @@
   </div>
 </template>
 <script setup>
+
 import { loadFull } from 'tsparticles'
 
 const particlesInit = async engine => {
@@ -146,15 +151,20 @@ const particlesInit = async engine => {
 const particlesLoaded = async container => {
   console.log('Particles container loaded', container)
 }
+var c = document.getElementsByTagName("Canvas");
+
+c.height = 1500
 </script>
 <style scoped>
 #tsparticles{
-      display:block;
-  position:static !important
+      min-width: 100vw !important;
+    min-height: 100vh !important;
+
+     
+
 }
 canvas{
-display: block !important;
-position: absolute !important;
+   min-height: 1366;
 
 }
 div .text{
