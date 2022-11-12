@@ -1,5 +1,5 @@
 <template>
-  <button @click="canvas()">sadasd</button>
+
   <div
     class="bg-slate-900 flex justify-center items-center overflow-hidden relative z-100"
     style="min-height:100vh;min-width:99.1vw;position:relative"
@@ -96,7 +96,12 @@
     <div class="z-50 tracking-wide">
       <div class="flex justify-center mainTitle mb-5">
         <div>
-          <h1 class="title tracking-widest" style="font-size:10rem">SHAI</h1>
+          <h1 class="title tracking-widest" style="font-size:10rem; -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;">SHAI</h1>
         </div>
         <div id="ui">
           <div class="text" style="color:#009bdb">WAVE</div>
@@ -403,6 +408,12 @@ div .text {
   z-index: 3;
 }
 h1 {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .title:hover {
   color: #fff;

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.4",
     "gsap": "^3.11.3",
     "particles.vue3": "^2.5.3",
     "particlesjs": "^2.2.3",
