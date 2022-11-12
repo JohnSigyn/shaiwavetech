@@ -1,12 +1,13 @@
 <template>
+  <button @click="canvas()">sadasd</button>
   <div
     class="bg-slate-900 flex justify-center items-center overflow-hidden relative z-100"
     style="min-height:100vh;min-width:99.1vw;position:relative"
   >
-  
     <Particles
-        style="min-width:100vh;min-height:100vh !important;position:absolute"
-      id="tsparticles" class="particles"
+      style="min-width:100vh;min-height:100vh !important;position:absolute"
+      id="tsparticles"
+      class="particles"
       :particlesInit="particlesInit"
       :particlesLoaded="particlesLoaded"
       :options="{
@@ -15,8 +16,8 @@
             value: 'none'
           }
         },
-        style:{
-            height:1366
+        style: {
+          height: 1366
         },
         fpsLimit: 120,
         interactivity: {
@@ -88,13 +89,15 @@
             value: { min: 1, max: 5 }
           }
         },
-        fullScreen:false,
+        fullScreen: false,
         detectRetina: false
       }"
     />
     <div class="z-50 tracking-wide">
       <div class="flex justify-center mainTitle mb-5">
-        <div><h1 class="title tracking-widest" style="font-size:10rem" >SHAI</h1></div>
+        <div>
+          <h1 class="title tracking-widest" style="font-size:10rem">SHAI</h1>
+        </div>
         <div id="ui">
           <div class="text" style="color:#009bdb">WAVE</div>
           <div class="text" style="color:#009bdb">WAVE</div>
@@ -122,10 +125,11 @@
           <div class="text" style="color:#009bdb">WAVE</div>
         </div>
         <div>
-        <h1 class="opacity-0" style="font-size:10rem" >WAVE</h1></div>
+          <h1 class="opacity-0" style="font-size:10rem">WAVE</h1>
+        </div>
       </div>
 
-      <h3 class="span loader" style="font-size:3rem" >
+      <h3 class="span loader" style="font-size:3rem">
         <span class="m">T</span>
         <span class="m">E</span>
         <span class="m">C</span>
@@ -141,7 +145,6 @@
   </div>
 </template>
 <script setup>
-
 import { loadFull } from 'tsparticles'
 
 const particlesInit = async engine => {
@@ -150,31 +153,31 @@ const particlesInit = async engine => {
 
 const particlesLoaded = async container => {
   console.log('Particles container loaded', container)
+  var c = document.querySelector('#tsparticles :nth-child(1)')
+  c.height = window.innerHeight
 }
-var c = document.getElementsByTagName("Canvas");
-
-c.height = 1500
+</script>
+<script>
+export default {
+  methods: {},
+  created () {}
+}
 </script>
 <style scoped>
-#tsparticles{
-      min-width: 100vw !important;
-    min-height: 100vh !important;
-
-     
-
+#tsparticles {
+  min-width: 100vw !important;
+  min-height: 100vh !important;
 }
-canvas{
-   min-height: 1366;
-
+canvas {
+  min-height: 1366;
 }
-div .text{
-margin: 90px 0 0 250px;
-will-change: transform;
+div .text {
+  margin: 90px 0 0 250px;
+  will-change: transform;
 }
 
 #ui {
   transform-style: preserve-3d;
-
 }
 #ui .text {
   position: absolute;
@@ -373,7 +376,7 @@ will-change: transform;
 }
 .title {
   transition: 0.3s;
-  color:#66df49
+  color: #66df49;
 }
 .nav,
 .slider {
@@ -399,15 +402,13 @@ will-change: transform;
   transition: all 0.3s ease;
   z-index: 3;
 }
-h1{
-
-
+h1 {
 }
 .title:hover {
-    color: #fff;
-text-shadow:   0 0 5px #66df49, 0 0 10px #66df49, 0 0 15px #66df49,
-      0 0 20px #66df49, 0 0 25px #66df49, 0 0 30px #66df49, 0 0 35px #66df49,
-      0 0 40px #66df49, 0 0 50px #66df49;
+  color: #fff;
+  text-shadow: 0 0 5px #66df49, 0 0 10px #66df49, 0 0 15px #66df49,
+    0 0 20px #66df49, 0 0 25px #66df49, 0 0 30px #66df49, 0 0 35px #66df49,
+    0 0 40px #66df49, 0 0 50px #66df49;
 }
 
 .slider h2 {
