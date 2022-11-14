@@ -1,5 +1,5 @@
 <template>
-  <div class="mainContainer">
+  <div class="mainContainer " style="background:#0f172a">
     <TransitionRoot appear :show="isOpen" as="template">
       <Dialog as="div" @close="closeModal" class="relative z-10">
         <TransitionChild
@@ -52,36 +52,26 @@
                   </button>
                 </div>
 
-                <div class="rounded-lg relative bg-slate-700">
-                  <img
+                <div class="rounded-lg relative">
+                 <div
                     v-if="imgIndex == 1"
-                    src="../assets/Wecome.webp"
+                    src="../assets/planspricing.webp"
                     class="rounded-lg"
                     width="100px"
                     alt=""
-                  />
-                  <img
+                  >First page insert here</div>
+                
+              
+                  <div
                     v-if="imgIndex == 2"
                     src="../assets/planspricing.webp"
                     class="rounded-lg"
                     width="100px"
                     alt=""
-                  />
+                  >
+                  Second page to insert here
+                  </div>
                
-                  <img
-                    v-if="imgIndex == 3"
-                    src="../assets/storedetail.webp"
-                    class="rounded-lg"
-                    width="100px"
-                    alt=""
-                  />
-                  <img
-                    v-if="imgIndex == 4"
-                    src="../assets/thankyou.webp"
-                    class="rounded-lg"
-                    width="100px"
-                    alt=""
-                  />
                 </div>
               </DialogPanel>
             </TransitionChild>
@@ -101,7 +91,7 @@
       </div>
       <div class="card">
         <div class="content">
-          <h2 class="title">Pricing Details</h2>
+          <h2 class="title">Ocean POS System</h2>
           <p class="copy">
             Choose among these options based on your budget
           </p>
@@ -112,19 +102,19 @@
       </div>
       <div class="card">
         <div class="content">
-          <h2 class="title">Apply</h2>
+          <h2 class="title">Plant Disease Detection</h2>
           <p class="copy">Enter your store details to apply</p>
-          <button class="btn" @click="openModal(3)">Book Now</button>
+          <button class="btn">Future Plan</button>
         </div>
       </div>
       <div class="card">
         <div class="content">
-          <h2 class="title">Thank You</h2>
+          <h2 class="title">Smart City Project</h2>
           <p class="copy">
             We thank you for chosing our company. In case of any grievances or
             issues please contact us.
           </p>
-          <button class="btn" @click="openModal(4)">Contact Now</button>
+          <button class="btn">Future Plan</button>
         </div>
       </div>
     </main>
@@ -156,7 +146,7 @@ export default {
   },
   methods: {
     openModal (index) {
-  
+  console.log(index)
       this.isOpen = true
       this.imgIndex = index
     }
@@ -181,7 +171,7 @@ body {
 }
 
 .mainContainer {
-  min-height: 100vh;
+  min-height: 106vh;
   display: flex;
   place-items: center;
 }
@@ -272,13 +262,13 @@ body {
 
 }
 .card:nth-child(2):before {
-  background-image: url('../assets/counterCheck.jpg');
+  background-image: url('../assets/cardAssets/POS.svg');
 }
 .card:nth-child(3):before {
-  background-image: url("../assets/Group 2422.svg");
+  background-image: url('../assets/cardAssets/PlantDiseaseDetection.svg');
 }
 .card:nth-child(4):before {
-  background-image: url("../assets/Group 2423.svg");
+  background-image: url('../assets/cardAssets/SmartCity.svg');
 }
 
 .content {
@@ -302,6 +292,7 @@ body {
 }
 
 .copy {
+  display: none;
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-style: italic;

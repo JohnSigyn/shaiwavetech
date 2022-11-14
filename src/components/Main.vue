@@ -96,45 +96,40 @@
     <div class="z-50 tracking-wide">
       <div class="flex justify-center mainTitle mb-5">
         <div>
-          <h1 class="title tracking-widest" style="font-size:10rem; -webkit-touch-callout: none;
-          -webkit-user-select: none;
-          -khtml-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;">SHAI</h1>
+          <h1 class="title tracking-widest">SHAI</h1>
         </div>
-        <div id="ui">
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
-          <div class="text" style="color:#009bdb">WAVE</div>
+        <div id="ui" class="mr-16">
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
+          <div class="text" >WAVE</div>
         </div>
         <div>
-          <h1 class="opacity-0" style="font-size:10rem">WAVE</h1>
+          <h1 class="opacity-0 placeholder">WAVE</h1>
         </div>
       </div>
 
-      <h3 class="span loader" style="font-size:3rem">
+      <h3 class="span loader flex justify-center technology" >
         <span class="m">T</span>
         <span class="m">E</span>
         <span class="m">C</span>
@@ -157,7 +152,7 @@ const particlesInit = async engine => {
 }
 
 const particlesLoaded = async container => {
-  console.log('Particles container loaded', container)
+  // console.log('Particles container loaded', container)
   var c = document.querySelector('#tsparticles :nth-child(1)')
   c.height = window.innerHeight
 }
@@ -169,15 +164,20 @@ export default {
 }
 </script>
 <style scoped>
+
 #tsparticles {
   min-width: 100vw !important;
   min-height: 100vh !important;
 }
+.placeholder{
+  
+font-size: 10rem;
+}
 canvas {
-  min-height: 1366;
+  min-height: 1366px;
 }
 div .text {
-  margin: 90px 0 0 250px;
+  margin: 130px 0 0 250px;
   will-change: transform;
 }
 
@@ -187,7 +187,7 @@ div .text {
 #ui .text {
   position: absolute;
   font-size: 10rem;
-  color: #fff;
+  color: #009bdb;
   line-height: 15rem;
   font-family: 'Anton', sans-serif;
 
@@ -379,8 +379,19 @@ div .text {
 .mainTitle {
   text-shadow: 0 0 2px;
 }
+
+#ui{
+    -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+}
 .title {
+  font-size:10rem; -webkit-touch-callout: none;
+        
   transition: 0.3s;
+
   color: #66df49;
 }
 .nav,
@@ -447,13 +458,13 @@ h3.span {
   transition: 0.3s;
 }
 span:hover {
-  color: black;
-  transform: translateX(25px);
+ 
 }
 
 a {
   text-decoration: none;
 }
+
 
 .nav-container {
   display: flex;
@@ -512,6 +523,9 @@ a {
   right: 0;
   z-index: auto;
 }
+.technology{
+  font-size: 3rem !important;
+}
 @media (min-width: 800px) {
   .nav h1,
   .slider h1 {
@@ -528,7 +542,10 @@ a {
   }
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 450px) {
+
+
+
   .nav h1,
   .slider h1 {
     font-size: 8vw;
@@ -603,5 +620,26 @@ a {
 
 span:nth-child(-n + 5) {
   color: #66df49;
+}
+
+@media only screen and (max-width: 400px) {
+#ui .text {
+
+  font-size: 2rem;
+
+}
+.title{
+  font-size: 2rem;
+}
+div .text {
+  margin: 25px 0 0 60px;
+  will-change: transform;
+}
+.placeholder{
+  font-size: 2rem;
+}
+.technology{
+  font-size: 1.2rem !important;
+}
 }
 </style>

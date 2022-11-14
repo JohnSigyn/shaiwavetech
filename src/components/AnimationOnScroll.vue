@@ -2,9 +2,10 @@
     <div class="overflow-x-hidden">
         <div class="w-full">
             <div style="height:100vh; overflow: hidden; justify-content: center; align-items: center;" class="md:flex scroll-trigger h-full md:h-1/2">
-                <div class="md:w-1/2 md:px-20">
-                    <h2 class="k2d-font uppercase mb-6 text-xl md:text-4xl pt-20 sm:pt-1">"<span class="orange-color">Product Design</span>"</h2>
-                    <p class="text-xl md:text-3xl k2d-font">We practice user-centered design. While we are planning,
+                <div class="px-32 md:w-1/2 md:px-32" style="padding:0 70px">
+                <div style="margin-bottom:30px !important">   <h2 class="k2d-font uppercase mb-6 text-xl md:text-4xl pt-20 sm:pt-1 text-center">"<span class="text-orange-500">Product Design</span>"</h2></div>
+                 
+                    <p class="text-xl mt-8 text-slate-600 md:text-3xl k2d-font  text-center" style="font-family: 'Ruluko', sans-serif;">We practice user-centered design. While we are planning,
                         designing, and building, we strive to solve the user’s problems,
                         so that your business goals are fulfill. As a result, your users
                         will experience software that is both intuitive and captivate.
@@ -909,7 +910,7 @@ export default {
 
 .pd.window1 {
     bottom: 130px;
-    left: 0px;
+    right: 20px;
     z-index: 11;
 }
 

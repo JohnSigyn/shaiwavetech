@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div id="canvasDiv" class="flex flex-row-reverse place-items-center overflow-hidden z-50" style="background:#242424;min-height: 100vh;">
 
     <div class="w-full"><h1> Insert Content here</h1>
@@ -229,4 +229,4 @@ setTimeout(e => {
   })
   animate()
 }, 1)
-</script>
+</script> -->
