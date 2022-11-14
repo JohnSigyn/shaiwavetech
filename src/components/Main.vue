@@ -622,13 +622,14 @@ span:nth-child(-n + 5) {
   color: #66df49;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
 #ui .text {
 
   font-size: 2rem;
 
 }
 .title{
+  margin-left:20px;
   font-size: 2rem;
 }
 div .text {
